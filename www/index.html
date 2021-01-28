@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <p data="A">Pornwisa Yathongchai</p>
+    <p id="btn">IT</p>
+    <p data="B" class="sel">BRU</p>
+
+    <button id="menu_member" class="btn btn-info">MEMBER</button>
+    <div id="div_content"></div>
+
+</body>
+</html>
+
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+    $(function(){
+      //  alert();
+      $("#btn").css("color","red");
+      $("p").html("KAKKK")
+      $("p").click(function(){
+        let val = $(this).attr("data");  
+        alert(val);
+      });
+      $("#menu_member").click(function(){
+        $("#div_content").load("./views/member.php");
+      });
+    });  //jQuery Ready
+
+    
+
+    
+</script>
+
